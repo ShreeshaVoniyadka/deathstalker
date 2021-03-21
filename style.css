@@ -11,7 +11,7 @@
         display: flex;
         flex-wrap: wrap;
         overflow: hidden;
-        justify-content: center;
+        /* justify-content: center; */
     }
     
     .menu ul {
@@ -25,6 +25,7 @@
         padding: 2px;
         color: #b2b1b1;
         cursor: pointer;
+        float: left;
     }
     
     .logo img {
@@ -38,16 +39,18 @@
     }
     
     .signup-btn {
+        position: fixed;
         top: 40px;
         right: 80px;
-        position: absolute;
+        /* position: absolute; */
         text-decoration: none;
         color: #fff;
         border: 2px solid transparent;
         border-radius: 20px;
-        background-image: linear-gradient(#42455a, #42455a), radial-gradient(circle at top left, #fd00da, #19d7f8);
+        background-image: -webkit-linear-gradient(#42455a, #42455a), radial-gradient(circle at top left, #fd00da, #19d7f8);
         background-origin: border-box;
         background-clip: content-box, border-box;
+        align-self: flex-end;
     }
     
     .signup-btn span {
@@ -76,13 +79,13 @@
     
     .app-text h1 {
         font-size: 43px;
-        width: 640px;
+        /* width: 640px; */
         position: relative;
         margin-left: 40px;
     }
     
     .app-text p {
-        width: 650px;
+        /* width: 650px; */
         font-size: 15px;
         margin: 30px 0 30px 40px;
         line-height: 25px;
@@ -112,7 +115,7 @@
         width: 50px;
         border: 8px solid transparent;
         border-radius: 50%;
-        background-image: linear-gradient(#42455a, #42455a), radial-gradient(circle at top left, #fd00da, #19d7f8);
+        background-image: -webkit-linear-gradient(#42455a, #42455a), radial-gradient(circle at top left, #fd00da, #19d7f8);
         background-origin: border-box;
         background-clip: content-box, border-box;
     }
@@ -136,7 +139,7 @@
         left: 0;
         bottom: 0;
         position: absolute;
-        background: linear-gradient(to right, #db1bf6, #19d7f8);
+        background: -webkit-linear-gradient(to right, #db1bf6, #19d7f8);
     }
     
     .quick-links ul {
@@ -162,8 +165,47 @@
         color: #fff;
     }
     
-    @media screen and (min-width:1380px) {
-        .quick-lines {
-            display: block;
+    @media screen and (max-width: 1050px) {
+        .app-text h1 {
+            font-size: 30px;
+            /* width: 640px; */
+            position: relative;
+            margin-left: 32px;
+        }
+        .app-text p {
+            /* width: 650px; */
+            font-size: 12px;
+            margin: 25px 0 25px 30px;
+            line-height: 20px;
+            color: #919191;
+        }
+    }
+    
+    @media screen and (max-width: 1000px) {
+        form {
+            width: 290px;
+        }
+        .login-content h2 {
+            font-size: 2.4rem;
+            margin: 8px 0;
+        }
+        .img img {
+            width: 400px;
+        }
+    }
+    
+    @media screen and (max-width: 900px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+        .img {
+            display: none;
+        }
+        .svg {
+            width: 100%;
+            height: auto;
+        }
+        .login-content {
+            justify-content: center;
         }
     }
