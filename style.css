@@ -162,8 +162,8 @@
         color: #fff;
     }
     
-    @media only screen(max-width:1380px) {
+    @media screen and (min-width:1380px) {
         .quick-lines {
-            display: none;
+            display: block;
         }
     }
