@@ -5,7 +5,18 @@
         background: #42455a;
     }
     
-    .container {
+    .burger {
+        display: none;
+    }
+    
+    .burger img {
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    b .container {
         width: 100%;
         height: 100%;
         display: flex;
@@ -39,10 +50,9 @@
     }
     
     .signup-btn {
-        position: fixed;
         top: 40px;
         right: 80px;
-        /* position: absolute; */
+        position: absolute;
         text-decoration: none;
         color: #fff;
         border: 2px solid transparent;
@@ -78,7 +88,7 @@
     }
     
     .app-text h1 {
-        font-size: 43px;
+        font-size: 45px;
         /* width: 640px; */
         position: relative;
         margin-left: 40px;
@@ -181,31 +191,24 @@
         }
     }
     
-    @media screen and (max-width: 1000px) {
-        form {
-            width: 290px;
+    @media screen and (max-width: 630px) {
+        .menu ul li {
+            display: none;
         }
-        .login-content h2 {
-            font-size: 2.4rem;
-            margin: 8px 0;
+        .burger {
+            display: contents;
         }
-        .img img {
+        .app-picture img {
             width: 400px;
         }
     }
     
-    @media screen and (max-width: 900px) {
-        .container {
-            grid-template-columns: 1fr;
+    @media screen and (max-width: 550px) {
+        .app-picture img {
+            width: 250px;
+            height: 250px;
         }
-        .img {
-            display: none;
-        }
-        .svg {
-            width: 100%;
-            height: auto;
-        }
-        .login-content {
-            justify-content: center;
+        .app-text h1 {
+            font-size: 25px;
         }
     }
